@@ -10,13 +10,3 @@ Feature: Carbohydrate calculator
         And I click calculate
         Then I see results
         And I verify results are accurate
-
-#    Scenario Outline: Create users status code is correct
-#        Given I am authorized to access create_users endpoint
-#       When I submit the post request using <data>
-#        Then Response status code should be <status_code>
-#
-#        Examples:
-#            |status_code    |data                                       |
-#            |201            |{"name": "morpheus", "job": "leader"}      |
-#            |201            |{"name": "morpheus"}                       |
