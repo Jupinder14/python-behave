@@ -13,6 +13,7 @@ class CarbCalcPage:
         self.caclulate_button = "//input[@alt='Calculate']"
         self.result_table = "//table[@class='cinfoT']//tbody"
         self.result_header = "//h2[@class='h2result']"
+        self.error_message = "//div/font[contains(text(), 'Please provide an age between 18 and 80.')]"
 
     def input_age(self, driver, age):
         driver.find_element(By.XPATH, self.age_text_box).clear()
@@ -40,6 +41,9 @@ class CarbCalcPage:
 
     def check_results_visible(self, driver):
         return driver.find_element(By.XPATH, self.result_header).is_displayed()
+
+    def check_error_visible(self, driver):
+        return driver.find_element(By.XPATH, self.error_message).is_displayed()
 
     def get_result(self, driver):
         table_data = {}

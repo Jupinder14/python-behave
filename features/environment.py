@@ -12,3 +12,6 @@ def before_all(context):
     context.driver.implicitly_wait(10)
 
     context.calculator = CarbCalcPage()
+
+def after_all(context):
+    context.driver.quit()
