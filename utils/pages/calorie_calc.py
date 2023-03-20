@@ -1,4 +1,3 @@
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 
@@ -34,7 +33,9 @@ class CarbCalcPage:
     def select_activity(self, driver, activity_type):
         dropdown_element = driver.find_element(By.NAME, self.activity_drop_down)
         dropdown = Select(dropdown_element)
-        if activity_type == 'moderate':
+        if activity_type == 'light':
+            dropdown.select_by_value("1.375")
+        elif activity_type == 'moderate':
             dropdown.select_by_value("1.465")
 
     def check_results_visible(self, driver):
