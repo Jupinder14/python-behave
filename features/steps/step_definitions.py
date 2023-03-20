@@ -34,6 +34,11 @@ def see_results(context):
     visible = context.calculator.check_results_visible(context.driver)
     assert visible == True
 
+@then('I see error message')
+def see_results(context):
+    visible = context.calculator.check_error_visible(context.driver)
+    assert visible == True
+
 @then('I verify results are accurate')
 def verify_results(context):
     expected_table_data = {
