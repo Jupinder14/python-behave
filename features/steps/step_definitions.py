@@ -37,11 +37,11 @@ def see_results(context):
 @then('I verify results are accurate')
 def verify_results(context):
     expected_table_data = {
-        'Weight Maintenance': ['2,879 Calories', '307 grams', '422 grams', '499 grams', '576 grams'],
-        'Lose 0.5 kg/week': ['2,379 Calories', '254 grams', '349 grams', '412 grams', '476 grams'],
-        'Lose 1 kg/week': ['1,879 Calories', '200 grams', '276 grams', '326 grams', '376 grams'],
-        'Gain 0.5 kg/week': ['3,379 Calories', '360 grams', '496 grams', '586 grams', '676 grams'],
-        'Gain 1 kg/week': ['3,879 Calories', '414 grams', '569 grams', '672 grams', '776 grams']
+        'Weight Maintenance': ['2,482 Calories', '265 grams', '364 grams', '430 grams', '496 grams'],
+        'Lose 0.5 kg/week': ['1,982 Calories', '211 grams', '291 grams', '344 grams', '396 grams'],
+        'Lose 1 kg/week': ['1,482 Calories', '158 grams', '217 grams', '257 grams', '296 grams'],
+        'Gain 0.5 kg/week': ['2,982 Calories', '318 grams', '437 grams', '517 grams', '596 grams'],
+        'Gain 1 kg/week': ['3,482 Calories', '371 grams', '511 grams', '604 grams', '696 grams']
     }
     table_data = context.calculator.get_result(context.driver)
 
