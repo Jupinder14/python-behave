@@ -1,4 +1,4 @@
-@run_this
+@smoke
 Feature: Carbohydrate calculator
 
     Scenario: Verify the calculator displays correct results for male using Mifflin St Jeor formula.
