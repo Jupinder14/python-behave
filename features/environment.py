@@ -3,6 +3,8 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
 from utils.pages.calorie_calc import CarbCalcPage
+from allure_commons._allure import attach
+from allure_commons.types import AttachmentType
 
 def before_all(context):
     chrome_options = Options()
@@ -15,3 +17,7 @@ def before_all(context):
 
 def after_all(context):
     context.driver.quit()
+
+def after_step(context, step):
+    if step.status == 'failed':
+        attach(context.driver.get_screenshot_as_png(),name="Screenshot",attachment_type=AttachmentType.PNG)
