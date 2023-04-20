@@ -4,6 +4,7 @@ import utils.urls as urls
 @given('I am on carbohydrate calculator page')
 def on_page(context):
     context.driver.get(urls.urls['carbohydrate_calculator'])
+    context.calculator.click_metric_units_tab(context.driver)
 
 @when('I enter {age} in age')
 def enter_age(context, age):
