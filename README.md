@@ -1,4 +1,4 @@
-# Automated e2e tests using Python and Behave
+# Automated e2e tests using Selenium with Python and Behave
 
 This project contains automated tests for carbohydrate calculator using python-behave
 This is the link to application: https://www.calculator.net/carbohydrate-calculator.html
